@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/Inter-font/Inter-VariableFont_opsz\,wght.ttf");
+  font-weight: 100 900;
+}
+
+:root {
+  --color-SmokyBlack: #14120b;
+  --color-SmoothWhite: #edecec;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  color: var(--color-SmoothWhite);
+  font-size: medium;
+  font-weight: normal;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#site {
+  max-width: 100vw;
+  min-height: 100vh;
+  padding-inline: 18px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--color-SmokyBlack);
+  font-family: "Inter", sans-serif;
+}
+
+/* #region Site Header */
+
+#site-head {
+  width: 100%;
+  max-width: 1360px;
+  margin-inline: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-block: 12px;
+}
+
+#site-head .logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+#site-head .nav {
+  display: none;
+}
+
+#site-head .btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#site-head .btns .download-btn {
+  display: none;
+}
+
+#site-head .btns .menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#site-head .btns .menu-btn .btn-icon {
+  font-size: xx-large;
+  font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  #site-head .btns .download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-SmoothWhite);
+    color: var(--color-SmokyBlack);
+    padding: 6px 12px;
+    border-radius: 14px;
+  }
+}
+
+@media (min-width: 900px) {
+  #site-head .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #site-head .nav .nav-links {
+    padding-inline: 16px;
+    padding-block: 4px;
+  }
+  #site-head .btns .menu-btn {
+    display: none;
+  }
+}
+
+/* #endregion */
