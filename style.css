@@ -7,6 +7,8 @@
 :root {
   --color-SmokyBlack: #14120b;
   --color-SmoothWhite: #edecec;
+  --color-MutedGray: #26241e;
+  --color-BlackChocolate: #1b1913;
 }
 
 * {
@@ -15,7 +17,7 @@
   margin: 0;
 
   color: var(--color-SmoothWhite);
-  font-size: medium;
+  font-size: small;
   font-weight: normal;
 }
 
@@ -117,3 +119,164 @@ a {
 }
 
 /* #endregion */
+
+#site-main {
+  width: 100%;
+  max-width: 1360px;
+  margin-inline: auto;
+}
+
+/* #region Hero section */
+
+#site-main .hero {
+  display: flex;
+  flex-direction: column;
+  padding-block-start: 105px;
+  padding-block-end: 60px;
+}
+
+#site-main .hero h1 {
+  font-size: x-large;
+  margin-bottom: 21px;
+  width: 100%;
+  max-width: 400px;
+}
+
+#site-main .hero .btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+#site-main .hero .btns button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 12px 18px;
+  border-radius: 20px;
+}
+
+#site-main .hero .btns button i {
+  color: var(--color-SmokyBlack);
+  font-size: medium;
+}
+
+#site-main .hero .btns .started-btn,
+#site-main .hero .btns .download-btn {
+  background-color: var(--color-SmoothWhite);
+  color: var(--color-SmokyBlack);
+}
+
+#site-main .hero .btns .demo-btn {
+  background-color: var(--color-MutedGray);
+}
+
+#site-main .hero .btns .demo-btn i {
+  color: var(--color-SmoothWhite);
+}
+
+#site-main .hero .btns .download-btn,
+#site-main .hero .btns .demo-btn {
+  display: none;
+}
+
+#site-main .hero figure {
+  height: 720px;
+  aspect-ratio: 9/16;
+  border-radius: 4px;
+  overflow: hidden;
+
+  background-color: red;
+}
+
+@media (min-width: 768px) {
+  #site-main .hero .btns .started-btn {
+    display: none;
+  }
+
+  #site-main .hero .btns .download-btn {
+    display: flex;
+  }
+  #site-main .hero .btns .demo-btn {
+    display: flex;
+  }
+}
+
+@media (min-width: 900px) {
+  #site-main .hero figure {
+    aspect-ratio: 3/4;
+  }
+}
+
+/* #endregion */
+
+/* #region Logo Cloud Section */
+
+#site-main .logo-cloud {
+  padding-bottom: 33px;
+}
+
+#site-main .logo-cloud h2 {
+  text-align: center;
+  padding-bottom: 21px;
+}
+
+#site-main .logo-cloud .logo-grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+
+  width: 100%;
+}
+
+#site-main .logo-cloud .logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 4px;
+  background-color: var(--color-BlackChocolate);
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+}
+
+#site-main .logo-cloud .logo-card img {
+  width: 75%;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (min-width: 768px) {
+  #site-main .logo-cloud .logo-card {
+    height: 100px;
+  }
+
+  #site-main .logo-cloud .logo-card img {
+    width: 50%;
+  }
+}
+
+@media (min-width: 900px) {
+  #site-main .logo-cloud .logo-grid {
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  #site-main .logo-cloud .logo-card img {
+    width: 60%;
+  }
+}
+
+/* #endregion */
+
+section.temp {
+  height: 200vh;
+}
