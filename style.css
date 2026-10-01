@@ -36,7 +36,6 @@ a {
 #site {
   max-width: 100vw;
   min-height: 100vh;
-  padding-inline: 18px;
 
   display: flex;
   flex-direction: column;
@@ -57,6 +56,8 @@ a {
   justify-content: space-between;
 
   padding-block: 12px;
+
+  padding-inline: 18px;
 }
 
 #site-head .logo {
@@ -126,6 +127,8 @@ a {
   width: 100%;
   max-width: 1360px;
   margin-inline: auto;
+
+  padding-inline: 18px;
 }
 
 /* #region Hero section */
@@ -864,6 +867,125 @@ a {
 @media (min-width: 900px) {
   .cta h2 {
     font-size: 70px;
+  }
+}
+
+/* #endregion */
+
+/* #region footer */
+
+#site-footer {
+  display: flex;
+  flex-direction: column;
+
+  padding-inline: 18px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  background-color: var(--color-BlackChocolate);
+}
+
+#site-footer .wrapper {
+  width: 100%;
+  max-width: 1360px;
+  margin-inline: auto;
+}
+
+#site-footer .top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 40px;
+  column-gap: 16px;
+  padding-bottom: 50px;
+}
+
+#site-footer .top h3 {
+  color: color-mix(in oklab, var(--color-SmoothWhite) 60%, transparent);
+  padding-bottom: 12px;
+}
+
+#site-footer .top li {
+  list-style: none;
+}
+
+#site-footer .top li + li {
+  padding-top: 12px;
+}
+
+#site-footer .bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+#site-footer .bottom .certifications {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#site-footer .bottom .certifications p {
+  color: color-mix(in oklab, var(--color-SmoothWhite) 60%, transparent);
+}
+
+#site-footer .bottom .actions {
+  display: flex;
+  gap: 20px;
+}
+
+#site-footer .bottom .actions .theme-toggle {
+  background-color: var(--color-MutedGray);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+#site-footer .bottom .actions .theme-toggle button {
+  padding: 6px 10px;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#site-footer .bottom .actions .theme-toggle button i {
+  font-size: medium;
+  color: color-mix(in oklab, var(--color-SmoothWhite) 60%, transparent);
+}
+
+#site-footer .bottom .actions .language-selector {
+  background-color: var(--color-MutedGray);
+  border-radius: 12px;
+
+  padding: 6px 10px;
+  font-size: medium;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+@media (min-width: 768px) {
+  #site-footer .top {
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 0px;
+  }
+
+  #site-footer .bottom {
+    flex-direction: row;
+    align-items: end;
+  }
+}
+
+@media (min-width: 900px) {
+  #site-footer .bottom .certifications {
+    flex-direction: row;
   }
 }
 
